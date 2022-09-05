@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Cambiar la linea 23, 48, 55, 69 con tus datos. 
+
 from posixpath import split
 import time
 from tkinter.font import names
@@ -14,7 +16,7 @@ from time import sleep
 from selenium.webdriver.common.action_chains import ActionChains
 
 
-# This function iteratively clicks on the "Next" button at the bottom right of the search page.
+# Esta función hace que baje el contenido del sitio web para que continúe la carga de los perfiles. 
 def profiles_loop():
   actions = ActionChains(driver)
   # Cambiar el 10 por las veces que deseas que baje el scroll para que cargue mas perfiles
@@ -31,7 +33,7 @@ def createFile(nombres):
     fp.write(nombres)
     fp.close()
 
-# specifies the path to the chromedriver.exe
+# Carga del drive
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
 
